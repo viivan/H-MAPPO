@@ -1,0 +1,22 @@
+// Standardized MEC workload attributes on a public DAGGen topology
+// source=random.10.920.gv seed=102208
+// input=0.25-2.0 MiB output_ratio=0.10-0.30 cycles_per_bit=250-750
+digraph G {
+  1 [size="447406", expect_size="69972", cycles="1249808176", alpha="349.182"]
+  1 -> 4 [size="69972"]
+  2 [size="1680181", expect_size="326519", cycles="8991383283", alpha="668.930"]
+  3 [size="1918663", expect_size="300606", cycles="9449812442", alpha="615.651"]
+  3 -> 5 [size="300606"]
+  4 [size="565954", expect_size="130422", cycles="2252870204", alpha="497.582"]
+  4 -> 6 [size="130422"]
+  4 -> 7 [size="130422"]
+  5 [size="299298", expect_size="73190", cycles="1112815439", alpha="464.761"]
+  5 -> 8 [size="73190"]
+  6 [size="479239", expect_size="107540", cycles="2633078250", alpha="686.786"]
+  6 -> 9 [size="107540"]
+  7 [size="949469", expect_size="266755", cycles="2458351214", alpha="323.648"]
+  7 -> 10 [size="266755"]
+  8 [size="534494", expect_size="113646", cycles="3147339660", alpha="736.056"]
+  9 [size="795774", expect_size="171837", cycles="2859461696", alpha="449.164"]
+  10 [size="295649", expect_size="80670", cycles="993421822", alpha="420.017"]
+}

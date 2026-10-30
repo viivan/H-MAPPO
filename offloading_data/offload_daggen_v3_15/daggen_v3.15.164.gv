@@ -1,0 +1,32 @@
+// Standardized MEC workload attributes on a public DAGGen topology
+// source=random.15.823.gv seed=152190
+// input=0.25-2.0 MiB output_ratio=0.10-0.30 cycles_per_bit=250-750
+digraph G {
+  1 [size="2024666", expect_size="255865", cycles="5784261619", alpha="357.112"]
+  1 -> 10 [size="255865"]
+  2 [size="2031770", expect_size="544043", cycles="7323948996", alpha="450.589"]
+  2 -> 10 [size="544043"]
+  3 [size="411642", expect_size="93303", cycles="1285954107", alpha="390.495"]
+  3 -> 12 [size="93303"]
+  3 -> 13 [size="93303"]
+  3 -> 14 [size="93303"]
+  4 [size="568780", expect_size="145723", cycles="2875040385", alpha="631.844"]
+  4 -> 13 [size="145723"]
+  5 [size="393912", expect_size="57657", cycles="1928029409", alpha="611.821"]
+  6 [size="1374219", expect_size="263838", cycles="6623830474", alpha="602.509"]
+  6 -> 15 [size="263838"]
+  7 [size="283352", expect_size="72490", cycles="1126441208", alpha="496.927"]
+  8 [size="744402", expect_size="167735", cycles="2559146269", alpha="429.732"]
+  8 -> 10 [size="167735"]
+  8 -> 11 [size="167735"]
+  9 [size="1885133", expect_size="337305", cycles="8932417094", alpha="592.294"]
+  9 -> 11 [size="337305"]
+  9 -> 12 [size="337305"]
+  9 -> 13 [size="337305"]
+  10 [size="529694", expect_size="57015", cycles="1457130317", alpha="343.861"]
+  11 [size="306660", expect_size="62563", cycles="1125250455", alpha="458.672"]
+  12 [size="518128", expect_size="101057", cycles="1993854211", alpha="481.024"]
+  13 [size="276458", expect_size="41775", cycles="682028951", alpha="308.378"]
+  14 [size="1965748", expect_size="299079", cycles="5630624874", alpha="358.046"]
+  15 [size="1684905", expect_size="199299", cycles="5635848677", alpha="418.113"]
+}

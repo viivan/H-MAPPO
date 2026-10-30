@@ -1,0 +1,60 @@
+seed: 42
+device: cuda
+dataset: public_v3
+env:
+  split: train
+  num_agents: 12
+  sample_with_replacement: false
+  min_subtasks: 10
+  max_subtasks: 30
+  system_profile: paper_public_v3
+  f_alloc_mode: load_aware
+  cloud_share_mode: shared
+  cloud_share_factor: 0.5
+  cloud_share_floor: 0.1
+  heuristic_state_mode: strong_outcome
+  heuristic_mask: false
+  tmax_mode: adaptive
+  tmax_slack: 1.5
+  tmax_min: 5.0
+  tmax_max: 300.0
+  deadline_penalty: 2.0
+  d_scale: 1.0e7
+  c_scale: 5.0e9
+  delta_scale: 2.0e6
+  task_selection_mode: urgency
+heuristic:
+  type: strong_greedy
+  critical_ratio_thresh: 0.7
+  slack_thresh: 0.25
+  cloud_speedup_thresh: 0.85
+  small_compute_ratio: 0.5
+  large_data_ratio: 0.8
+  local_competitive_ratio: 1.05
+  primary_bonus: 1.0
+  top_k: 2
+  top_k_end: 4
+  top_k_decay_episode: 800
+model:
+  actor_type: mlp
+  actor_hidden_dim: 128
+  critic_hidden_dim: 128
+train:
+  total_episodes: 1000
+  episodes_per_update: 16
+  log_interval: 10
+  save_interval: 250
+  actor_lr: 0.00025
+  critic_lr: 0.0003
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_ratio: 0.2
+  entropy_coef: 0.04
+  value_coef: 0.5
+  max_grad_norm: 1.0
+  ppo_epochs: 3
+  mini_batch_size: 256
+output:
+  algorithm_name: event_ppo_ablation_no_haca_paper_v3
+  root_dir: outputs
+  save_best_by: ep_return

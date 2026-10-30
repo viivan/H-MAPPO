@@ -1,0 +1,37 @@
+digraph "predictive_maintenance_n15_train_0001" {
+  graph [scenario="predictive_maintenance", deadline_s="2.343599"];
+  1 [size="927372", expect_size="925943", cycles="156590770", task_type="history"];
+  2 [size="1411345", expect_size="1060358", cycles="28916367", task_type="history"];
+  3 [size="218043", expect_size="156056", cycles="79537208", task_type="history"];
+  4 [size="246128", expect_size="220995", cycles="37957667", task_type="history"];
+  5 [size="102769", expect_size="38804", cycles="257524894", task_type="preprocess"];
+  6 [size="743376", expect_size="322773", cycles="101340872", task_type="preprocess"];
+  7 [size="65093", expect_size="39457", cycles="141215956", task_type="preprocess"];
+  8 [size="45825", expect_size="10348", cycles="275237395", task_type="feature"];
+  9 [size="32819", expect_size="2881", cycles="233688247", task_type="feature"];
+  10 [size="388244", expect_size="82437", cycles="368618341", task_type="feature"];
+  11 [size="35454", expect_size="9117", cycles="1166089601", task_type="fusion"];
+  12 [size="59500", expect_size="6073", cycles="308721423", task_type="fusion"];
+  13 [size="6703", expect_size="1329", cycles="711056005", task_type="prediction"];
+  14 [size="7577", expect_size="619", cycles="854221809", task_type="prediction"];
+  15 [size="1353", expect_size="568", cycles="76846450", task_type="decision"];
+  1 -> 5 [size="925943"];
+  2 -> 6 [size="1060358"];
+  3 -> 6 [size="156056"];
+  3 -> 7 [size="156056"];
+  4 -> 7 [size="220995"];
+  5 -> 8 [size="38804"];
+  6 -> 9 [size="322773"];
+  6 -> 10 [size="322773"];
+  7 -> 9 [size="39457"];
+  7 -> 10 [size="39457"];
+  8 -> 11 [size="10348"];
+  8 -> 12 [size="10348"];
+  9 -> 12 [size="2881"];
+  10 -> 11 [size="82437"];
+  11 -> 13 [size="9117"];
+  12 -> 13 [size="6073"];
+  12 -> 14 [size="6073"];
+  13 -> 15 [size="1329"];
+  14 -> 15 [size="619"];
+}

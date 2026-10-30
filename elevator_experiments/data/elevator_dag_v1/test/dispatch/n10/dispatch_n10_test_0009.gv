@@ -1,0 +1,23 @@
+digraph "dispatch_n10_test_0009" {
+  graph [scenario="dispatch", deadline_s="0.250000"];
+  1 [size="3322", expect_size="3302", cycles="1236756", task_type="request"];
+  2 [size="3436", expect_size="3292", cycles="5275657", task_type="request"];
+  3 [size="2958", expect_size="2537", cycles="1067452", task_type="request"];
+  4 [size="1365", expect_size="1329", cycles="5515039", task_type="request"];
+  5 [size="5474", expect_size="1663", cycles="35322929", task_type="aggregate"];
+  6 [size="13339", expect_size="3279", cycles="92531091", task_type="candidate"];
+  7 [size="2610", expect_size="789", cycles="140662864", task_type="candidate"];
+  8 [size="14900", expect_size="1810", cycles="81568913", task_type="select"];
+  9 [size="359", expect_size="201", cycles="11446979", task_type="command"];
+  10 [size="1029", expect_size="530", cycles="4386379", task_type="command"];
+  1 -> 5 [size="3302"];
+  2 -> 5 [size="3292"];
+  3 -> 5 [size="2537"];
+  4 -> 5 [size="1329"];
+  5 -> 6 [size="1663"];
+  5 -> 7 [size="1663"];
+  6 -> 8 [size="3279"];
+  7 -> 8 [size="789"];
+  8 -> 9 [size="1810"];
+  8 -> 10 [size="1810"];
+}

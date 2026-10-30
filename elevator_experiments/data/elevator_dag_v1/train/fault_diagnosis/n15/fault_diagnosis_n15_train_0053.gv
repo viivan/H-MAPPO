@@ -1,0 +1,37 @@
+digraph "fault_diagnosis_n15_train_0053" {
+  graph [scenario="fault_diagnosis", deadline_s="1.192858"];
+  1 [size="19710", expect_size="18182", cycles="10229124", task_type="sensor"];
+  2 [size="25502", expect_size="24249", cycles="43510830", task_type="sensor"];
+  3 [size="96142", expect_size="92344", cycles="40693351", task_type="sensor"];
+  4 [size="16911", expect_size="14728", cycles="49880130", task_type="sensor"];
+  5 [size="58891", expect_size="42265", cycles="51889468", task_type="preprocess"];
+  6 [size="31160", expect_size="12454", cycles="101637261", task_type="preprocess"];
+  7 [size="41280", expect_size="24697", cycles="224198832", task_type="preprocess"];
+  8 [size="96161", expect_size="40098", cycles="268753060", task_type="preprocess"];
+  9 [size="12365", expect_size="3087", cycles="165121691", task_type="feature"];
+  10 [size="14254", expect_size="2506", cycles="100494314", task_type="feature"];
+  11 [size="119848", expect_size="16560", cycles="130475299", task_type="feature"];
+  12 [size="225496", expect_size="65653", cycles="1138960070", task_type="fusion"];
+  13 [size="31643", expect_size="7902", cycles="413821886", task_type="inference"];
+  14 [size="7895", expect_size="1251", cycles="1562278162", task_type="inference"];
+  15 [size="3122", expect_size="312", cycles="35068987", task_type="report"];
+  1 -> 5 [size="18182"];
+  2 -> 5 [size="24249"];
+  2 -> 6 [size="24249"];
+  2 -> 7 [size="24249"];
+  3 -> 7 [size="92344"];
+  4 -> 8 [size="14728"];
+  5 -> 9 [size="42265"];
+  5 -> 10 [size="42265"];
+  6 -> 10 [size="12454"];
+  6 -> 11 [size="12454"];
+  7 -> 11 [size="24697"];
+  8 -> 11 [size="40098"];
+  9 -> 12 [size="3087"];
+  10 -> 12 [size="2506"];
+  11 -> 12 [size="16560"];
+  12 -> 13 [size="65653"];
+  12 -> 14 [size="65653"];
+  13 -> 15 [size="7902"];
+  14 -> 15 [size="1251"];
+}

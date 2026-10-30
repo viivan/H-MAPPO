@@ -1,0 +1,23 @@
+digraph "fault_diagnosis_n10_train_0194" {
+  graph [scenario="fault_diagnosis", deadline_s="0.655835"];
+  1 [size="105947", expect_size="97926", cycles="26991831", task_type="sensor"];
+  2 [size="20435", expect_size="19541", cycles="28299066", task_type="sensor"];
+  3 [size="37902", expect_size="33119", cycles="24904145", task_type="sensor"];
+  4 [size="147388", expect_size="94604", cycles="228695893", task_type="preprocess"];
+  5 [size="43143", expect_size="17397", cycles="77615182", task_type="preprocess"];
+  6 [size="24337", expect_size="17538", cycles="114381275", task_type="preprocess"];
+  7 [size="9513", expect_size="964", cycles="579946675", task_type="feature"];
+  8 [size="10376", expect_size="2411", cycles="249516646", task_type="feature"];
+  9 [size="188574", expect_size="36439", cycles="363643557", task_type="fusion"];
+  10 [size="8906", expect_size="1860", cycles="522949951", task_type="inference"];
+  1 -> 4 [size="97926"];
+  2 -> 5 [size="19541"];
+  3 -> 6 [size="33119"];
+  4 -> 7 [size="94604"];
+  5 -> 8 [size="17397"];
+  6 -> 7 [size="17538"];
+  6 -> 8 [size="17538"];
+  7 -> 9 [size="964"];
+  8 -> 9 [size="2411"];
+  9 -> 10 [size="36439"];
+}

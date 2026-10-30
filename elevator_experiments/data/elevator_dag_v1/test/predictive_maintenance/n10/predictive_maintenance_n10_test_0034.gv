@@ -1,0 +1,24 @@
+digraph "predictive_maintenance_n10_test_0034" {
+  graph [scenario="predictive_maintenance", deadline_s="2.670676"];
+  1 [size="1011055", expect_size="865472", cycles="97960769", task_type="history"];
+  2 [size="888613", expect_size="720287", cycles="24772785", task_type="history"];
+  3 [size="1127495", expect_size="824628", cycles="30048644", task_type="history"];
+  4 [size="813645", expect_size="343766", cycles="141275706", task_type="preprocess"];
+  5 [size="435173", expect_size="142741", cycles="200382227", task_type="preprocess"];
+  6 [size="401216", expect_size="88920", cycles="362625934", task_type="feature"];
+  7 [size="300274", expect_size="31789", cycles="262293346", task_type="feature"];
+  8 [size="94091", expect_size="10615", cycles="434614819", task_type="fusion"];
+  9 [size="12207", expect_size="2386", cycles="1352748895", task_type="prediction"];
+  10 [size="7928", expect_size="2284", cycles="60354801", task_type="decision"];
+  1 -> 4 [size="865472"];
+  2 -> 4 [size="720287"];
+  2 -> 5 [size="720287"];
+  3 -> 5 [size="824628"];
+  4 -> 6 [size="343766"];
+  5 -> 6 [size="142741"];
+  5 -> 7 [size="142741"];
+  6 -> 8 [size="88920"];
+  7 -> 8 [size="31789"];
+  8 -> 9 [size="10615"];
+  9 -> 10 [size="2386"];
+}

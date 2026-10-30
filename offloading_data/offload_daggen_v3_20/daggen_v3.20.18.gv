@@ -1,0 +1,33 @@
+// Standardized MEC workload attributes on a public DAGGen topology
+// source=random.20.162.gv seed=202044
+// input=0.25-2.0 MiB output_ratio=0.10-0.30 cycles_per_bit=250-750
+digraph G {
+  1 [size="381732", expect_size="90475", cycles="1955031151", alpha="640.184"]
+  1 -> 20 [size="90475"]
+  2 [size="305410", expect_size="68265", cycles="1729720569", alpha="707.950"]
+  2 -> 20 [size="68265"]
+  3 [size="620922", expect_size="127306", cycles="1729217599", alpha="348.115"]
+  3 -> 20 [size="127306"]
+  4 [size="741846", expect_size="177019", cycles="3951633681", alpha="665.845"]
+  4 -> 20 [size="177019"]
+  5 [size="1396408", expect_size="229686", cycles="7604500588", alpha="680.720"]
+  5 -> 20 [size="229686"]
+  6 [size="1413979", expect_size="183003", cycles="8443380308", alpha="746.420"]
+  7 [size="1379346", expect_size="271647", cycles="7672663751", alpha="695.317"]
+  8 [size="1764882", expect_size="413021", cycles="8246133568", alpha="584.043"]
+  9 [size="682335", expect_size="183030", cycles="3817905787", alpha="699.419"]
+  10 [size="329095", expect_size="75325", cycles="1904203765", alpha="723.273"]
+  11 [size="981466", expect_size="269203", cycles="4011510996", alpha="510.908"]
+  12 [size="782979", expect_size="184533", cycles="2439955341", alpha="389.531"]
+  13 [size="408302", expect_size="101143", cycles="910296452", alpha="278.684"]
+  13 -> 20 [size="101143"]
+  14 [size="960177", expect_size="234757", cycles="3594285934", alpha="467.920"]
+  15 [size="844814", expect_size="117398", cycles="2594775580", alpha="383.927"]
+  16 [size="662306", expect_size="112272", cycles="2893098857", alpha="546.028"]
+  17 [size="725843", expect_size="73278", cycles="2983698264", alpha="513.833"]
+  17 -> 20 [size="73278"]
+  18 [size="1902953", expect_size="564442", cycles="3888044484", alpha="255.395"]
+  19 [size="422200", expect_size="118818", cycles="1791059753", alpha="530.276"]
+  19 -> 20 [size="118818"]
+  20 [size="272726", expect_size="44517", cycles="1581418688", alpha="724.820"]
+}

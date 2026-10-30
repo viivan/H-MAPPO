@@ -1,0 +1,35 @@
+digraph "dispatch_n15_train_0072" {
+  graph [scenario="dispatch", deadline_s="0.513345"];
+  1 [size="1516", expect_size="1226", cycles="1194386", task_type="request"];
+  2 [size="585", expect_size="499", cycles="1625923", task_type="request"];
+  3 [size="1201", expect_size="983", cycles="4235270", task_type="request"];
+  4 [size="1175", expect_size="993", cycles="2480405", task_type="request"];
+  5 [size="1614", expect_size="1345", cycles="1076946", task_type="request"];
+  6 [size="569", expect_size="505", cycles="1241274", task_type="request"];
+  7 [size="59981", expect_size="16392", cycles="32198070", task_type="aggregate"];
+  8 [size="3217", expect_size="464", cycles="559366143", task_type="candidate"];
+  9 [size="21134", expect_size="4277", cycles="706600866", task_type="candidate"];
+  10 [size="5199", expect_size="1390", cycles="136268481", task_type="candidate"];
+  11 [size="45427", expect_size="11433", cycles="488419652", task_type="candidate"];
+  12 [size="3512", expect_size="728", cycles="240898447", task_type="select"];
+  13 [size="7200", expect_size="1805", cycles="6858934", task_type="command"];
+  14 [size="3167", expect_size="1174", cycles="1291636", task_type="command"];
+  15 [size="5154", expect_size="2541", cycles="26742505", task_type="command"];
+  1 -> 7 [size="1226"];
+  2 -> 7 [size="499"];
+  3 -> 7 [size="983"];
+  4 -> 7 [size="993"];
+  5 -> 7 [size="1345"];
+  6 -> 7 [size="505"];
+  7 -> 8 [size="16392"];
+  7 -> 9 [size="16392"];
+  7 -> 10 [size="16392"];
+  7 -> 11 [size="16392"];
+  8 -> 12 [size="464"];
+  9 -> 12 [size="4277"];
+  10 -> 12 [size="1390"];
+  11 -> 12 [size="11433"];
+  12 -> 13 [size="728"];
+  12 -> 14 [size="728"];
+  12 -> 15 [size="728"];
+}
